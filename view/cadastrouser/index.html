@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+
+<link href="../../css/cadastro.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+ 
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="../../js/cadastro.js"></script>
+  
+
+</head>
+<body>
+
+<h2 class="text-center">Cadastro</h2>
+
+<div class="container">
+  <form action="../../control/create_user.php" class="form-cadastro" method="post">
+    <label for="username">Nome do usuario</label>
+    <input type="text" id="username" name="username" pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{5,20}$" title="Deve conter pelo menos 6 letras." required >
+    <!--<div id="Erro_nome">
+      <p id="nome_erro" class="invalid"><b>Insira mais de 5 letras</b></p>
+    </div>-->
+
+    <label for="psw">Password</label>
+    <input type="password" id="psw" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Deve conter pelo menos um número, uma letra minúscula, maiúscula e pelo menos 8 caracteres." required>
+
+     <label for="psw-rec">Confirmar Senha</label>
+    <input type="password" id="psw-rec" name="psw-rec" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Deve conter pelo menos um número, uma letra minúscula, maiúscula e pelo menos 8 caracteres." required> <p> </p>
+    
+    <button class="btn btn-primary" type="submit"  value="Cadastrar">Cadastrar</button>
+  </form>
+</div>
+
+<div id="message">
+  <h3>Senha deve conter:</h3>
+  <p id="letter"  class="invalid"> <b>Letras minúsculas</b></p>
+  <p id="capital" class="invalid"> <b>Letras maiúsculas</b></p>
+  <p id="number"  class="invalid"><b>números</b></p>
+  <p id="length"  class="invalid">Mínimo <b>8 caracteres</b></p>
+  <p id="diff"    class="invalid"><b>senhas diferem</b></p>
+</div>
+
+ <script src="../../js/cadastro.js"></script>
+				
+
+</body>
+</html>
