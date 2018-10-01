@@ -12,7 +12,6 @@
 		    $this->conn->exec('SET character_set_client=utf8');
 		    $this->conn->exec('SET character_set_results=utf8');
 
-
 		}
 
 		private function setParams($statement, $parameters = array()){
