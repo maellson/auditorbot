@@ -142,7 +142,7 @@ and open the template in the editor.
                         $test= json_encode($arrayErrados);
                         $string_ = (string) var_dump($arrayErrados);
 
-        $lista = $arrayErrados; 
+                        $lista = $arrayErrados; 
 
 /* criar algoritimo para alterar o status dos que não forem encontrados para "error"  de acordo com o id de cada um*/
         ?>

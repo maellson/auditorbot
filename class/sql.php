@@ -6,7 +6,7 @@
 
 		public function __construct(){
 
-			$this->conn = new PDO("mysql:dbname=aluizio; host=localhost","root","cwkekamq25");
+			$this->conn = new PDO("mysql:dbname=aluizio; host=localhost","root","");
 			$this->conn->exec("set names utf8");
 		    $this->conn->exec('SET character_set_connection=utf8');
 		    $this->conn->exec('SET character_set_client=utf8');
